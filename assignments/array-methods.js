@@ -65,13 +65,33 @@ console.log(allCaps);
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
-let largeShirts = [];
+let largeShirts = runners.filter((shirt_size) => shirt_size === 'L');
+
 console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
-let ticketPriceTotal = [];
-console.log(ticketPriceTotal);
+// let ticketPriceTotal = [];
+// let total = [];
+// for (let i = 0; i < runners.length; i++){
+//    let total = runners.reduce((acc, item) => {
+//          return acc + item.donation
+//      }, 0)
+    
+// }
+// console.log(ticketPriceTotal);
+
+// First way i did the problem:
+
+// let ticketPriceTotal = [];
+// for (let i = 0; i < runners.length; i++){
+//     ticketPriceTotal.push(runners[i]['donation'])
+// }
+// let total = ticketPriceTotal.reduce((acc, item) => {
+//     return acc + item
+// }, 0)
+
+// console.log(total);
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
